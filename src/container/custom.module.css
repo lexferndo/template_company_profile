@@ -1,0 +1,10 @@
+.my-class {
+  display: block;
+  padding: 8px 16px; /* Replace with actual values or define the variables */
+  border-radius: 8px; /* Replace with actual value or define the variable */
+  font-weight: 500;
+}
+
+.my-class:hover {
+  background-color: #f8f9fa; /* Replace with actual color or define the variable */
+}
