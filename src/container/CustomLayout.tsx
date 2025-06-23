@@ -25,6 +25,7 @@ import gifAbout from "../assets/gif_about.gif";
 import { useEffect, useState } from "react";
 import {
   IconBrandWhatsapp,
+  IconCircleDashedCheck,
   IconCloudLock,
   IconCode,
   IconDeviceDesktopCog,
@@ -48,6 +49,8 @@ const CustomLayout = () => {
       setWidthHeight(500);
     }
   }, [isMobile]);
+
+  const iconCheck = <IconCircleDashedCheck size={20} />;
 
   return (
     <AppShell header={{ height: 60 }} padding="md">
@@ -168,29 +171,43 @@ const CustomLayout = () => {
             <Flex
               direction={"column"}
               justify={"center"}
-              gap={10}
+              gap={20}
               w={{ base: "100%", sm: "50%" }}>
               <Text size="2rem">About Us</Text>
               <Text size="lg" fw={300} ta={"justify"}>
-                At Aftech Solutions, we specialize in delivering comprehensive
-                IT services tailored to meet the evolving needs of businesses
-                and individuals. Our expertise spans PC/laptop/MacBook repairs,
-                remote and on-site troubleshooting, custom software development,
-                network setup, and CCTV installation—all designed to keep your
-                operations running smoothly.
+                <Text span c="#4F8025" fw={600} inherit>
+                  DENEXT
+                </Text>{" "}
+                is a modern IT Support & Consulting company committed to
+                delivering reliable, flexible, and affordable technology
+                solutions for SMEs, startups, and large enterprises. We view
+                technology not merely as a tool, but as a core strategy to drive
+                business growth and efficiency. With a human-centric and
+                results-oriented approach, we position ourselves as a trusted
+                partner in your digital transformation journey.
               </Text>
 
-              <Grid grow gutter={{ base: 5, sm: 10 }}>
-                <Grid.Col span={{ base: 6, sm: 4 }} order={{ base: 1, sm: 1 }}>
-                  <Badge color="green">Data Security Guaranteed</Badge>
-                </Grid.Col>
-                <Grid.Col span={{ base: 6, sm: 4 }} order={{ base: 3, sm: 2 }}>
-                  <Badge color="green">Cutting-Edge IT Solutions</Badge>
-                </Grid.Col>
-                <Grid.Col span={{ base: 6, sm: 4 }} order={{ base: 2, sm: 3 }}>
-                  <Badge color="green">Fast Response</Badge>
-                </Grid.Col>
-              </Grid>
+              <Flex direction={"column"} gap={20}>
+                <Text size="2rem">Why DENEXT ?</Text>
+
+                <Flex gap={10} wrap="wrap" justify="flex-start">
+                  <Badge color="green" leftSection={iconCheck} size="md">
+                    Professional & Experienced Team
+                  </Badge>
+                  <Badge color="green" leftSection={iconCheck} size="md">
+                    Fast & Efficient Solutions
+                  </Badge>
+                  <Badge color="green" leftSection={iconCheck} size="md">
+                    Available for Remote & Onsite Support
+                  </Badge>
+                  <Badge color="green" leftSection={iconCheck} size="md">
+                    Transparent & Flexible Pricing
+                  </Badge>
+                  <Badge color="green" leftSection={iconCheck} size="md">
+                    Multi-Platform Support (Windows, Linux, macOS)
+                  </Badge>
+                </Flex>
+              </Flex>
             </Flex>
           </Flex>
         </AppShell.Section>
@@ -207,99 +224,163 @@ const CustomLayout = () => {
               </Text>
 
               <Grid justify="center" align="center" p={15}>
-                <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
                       <IconHeadset size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
-                      IT Support & Consultation
+                      IT Support (Remote & On-site)
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Expert troubleshooting and tailored IT solutions to keep
-                      your operations seamless and efficient.
+                      We provide daily technical support to help resolve IT
+                      issues and ensure your systems run smoothly. Our services
+                      include operating system and software installation, along
+                      with routine maintenance to keep work devices like PCs,
+                      laptops, and printers performing at their best—either
+                      remotely or directly at your location.
                     </Text>
                   </Card>
                 </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
                       <IconCloudLock size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
-                      Network & IT Security
+                      Network & Infrastructure
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Robust network management and advanced data security
-                      systems to safeguard your business.
+                      Our team designs and implements office network systems,
+                      including LAN, WAN, and WiFi. We handle installation and
+                      configuration of network equipment such as Mikrotik,
+                      Ubiquiti, Cisco, and TP-Link, while ensuring secure,
+                      stable, and optimized connections through proper bandwidth
+                      management, VLAN structuring, and network security
+                      protocols.
                     </Text>
                   </Card>
                 </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
                       <IconDeviceDesktopCog size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
-                      Onsite & Remote Helpdesk
+                      Virtualization & Server
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Comprehensive troubleshooting for IT devices and systems,
-                      available both onsite and remotely.
+                      We help businesses build robust infrastructure through
+                      physical and virtual server setups using Proxmox, VMware,
+                      Hyper-V, and Windows Server. Services also include
+                      configuring Active Directory, DNS, DHCP, and implementing
+                      reliable systems for data replication, high availability,
+                      and failover.
                     </Text>
                   </Card>
                 </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
                       <IconDeviceLaptop size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
-                      Computer & Printer Service
+                      Website & Application Development
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Repair and maintenance for computers, laptops, and
-                      printers to ensure peak performance.
+                      From company profiles to custom business tools, we develop
+                      professional websites and web applications. Our service
+                      covers everything from domain registration and SSL setup
+                      to regular maintenance, backup automation, and SEO
+                      optimization to improve online presence.
                     </Text>
                   </Card>
                 </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
                       <IconCode size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
-                      Website Development & SEO
+                      Cloud & Email Hosting
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Professional website design and SEO optimization to boost
-                      your online visibility on search engines like Google.
+                      We support cloud migration and setup for platforms like
+                      Google Workspace, Microsoft 365, and Zoho Mail. Our
+                      solutions integrate business email, team collaboration
+                      tools, and secure storage with full configuration of email
+                      protocols like SMTP, DKIM, and SPF to ensure delivery and
+                      data safety.
                     </Text>
                   </Card>
                 </Grid.Col>
-                <Grid.Col span={{ base: 12, sm: 6, md: 4 }}>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
                   <Card shadow="sm" padding="lg">
                     <Avatar color="green" radius="md" size="lg">
                       <IconServerCog size={32} />
                     </Avatar>
 
                     <Text fw={500} size="lg" mt="md">
-                      Maintenance & Optimization
+                      Digital Security & CCTV
                     </Text>
 
                     <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
-                      Proactive IT system maintenance and performance tuning to
-                      enhance business efficiency.
+                      We offer digital surveillance solutions using analog or IP
+                      CCTV systems from top brands like Hikvision, Dahua, and
+                      Ezviz. Our setup includes both local and remote
+                      monitoring, fully integrated with your existing network
+                      and centralized storage systems like NAS or cloud
+                      services.
+                    </Text>
+                  </Card>
+                </Grid.Col>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
+                  <Card shadow="sm" padding="lg">
+                    <Avatar color="green" radius="md" size="lg">
+                      <IconServerCog size={32} />
+                    </Avatar>
+
+                    <Text fw={500} size="lg" mt="md">
+                      Backup & Disaster Recovery
+                    </Text>
+
+                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
+                      Our backup strategies include local, offsite, and
+                      cloud-based options using tools like Synology, ZFS, rsync,
+                      and Google Drive. We also provide data synchronization
+                      between branch and main office servers, and implement
+                      well-structured disaster recovery plans to ensure business
+                      continuity.
+                    </Text>
+                  </Card>
+                </Grid.Col>
+                <Grid.Col span={{ base: 12, sm: 6, md: 3 }}>
+                  <Card shadow="sm" padding="lg">
+                    <Avatar color="green" radius="md" size="lg">
+                      <IconServerCog size={32} />
+                    </Avatar>
+
+                    <Text fw={500} size="lg" mt="md">
+                      IT Hardware & Maintenance
+                    </Text>
+
+                    <Text mt="xs" c="dimmed" size="sm" ta={"justify"}>
+                      We offer repair and upgrade services for PCs, laptops, and
+                      MacBooks across Windows, macOS, and Linux environments.
+                      From hardware procurement and installation to
+                      infrastructure audits and IT asset documentation, we
+                      ensure your hardware ecosystem stays reliable and
+                      organized.
                     </Text>
                   </Card>
                 </Grid.Col>
@@ -329,6 +410,18 @@ const CustomLayout = () => {
             stroke={1.5}
           />
         </ActionIcon>
+
+        <AppShell.Section
+          p={"md"}
+          style={{
+            borderTop: "1px solid #eaeaea",
+          }}>
+          <footer style={{ textAlign: "center", justifyContent: "center" }}>
+            <Text size="sm" c="dimmed">
+              © {new Date().getFullYear()} DENEXT. All rights reserved.
+            </Text>
+          </footer>
+        </AppShell.Section>
       </AppShell.Main>
     </AppShell>
   );
