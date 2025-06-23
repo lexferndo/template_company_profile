@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Denext",
   description: "Aftech Solutions | One Stop IT Solutions",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.jpeg",
   },
 };
 
