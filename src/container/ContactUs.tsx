@@ -21,7 +21,7 @@ export function GetInTouch() {
               "linear-gradient(to right, #4F8025 ,rgb(144, 183, 110))",
           }}>
           <Text fz="lg" fw={700} className={classes.title} c="#fff">
-            Contact information
+            Informasi Kontak
           </Text>
 
           <ContactIconsList />

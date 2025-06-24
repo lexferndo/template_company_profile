@@ -14,9 +14,9 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Denext",
-  description: "Aftech Solutions | One Stop IT Solutions",
+  description: "One Stop IT Solutions",
   icons: {
-    icon: "/favicon.jpeg",
+    icon: "/favicon.png",
   },
 };
 
